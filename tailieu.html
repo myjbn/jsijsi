@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Jsi</title>
+    <link rel="icon" type="image/icon" href="images/logomyjsi.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="style.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Grape+Nuts&family=WindSong:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Grape+Nuts&family=Mynerve&family=WindSong:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Cherry+Bomb+One&family=Grape+Nuts&family=Mynerve&family=WindSong:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="themify-icons-font/themify-icons/themify-icons.css" />
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <div class="header">
+    </div>
+    <div class="nav-wrapper">
+        <div class="navigation" id="navbar">
+            <a href="index.html" id="nav_logo">
+                <img src="https://od.lk/s/NzlfNDgyMzY2OTlf/logomyjsi.png" width="46px" height="46px">
+            </a>
+            <a href="index.html" class="nav_list" id="nav_home"> Trang chủ </a>
+            <div class="nav_list" id="nav_giaitri"> Giải trí
+                <div class="dropdown_content">
+                    <a href="phimanh.html"> Phim ảnh </a>
+                    <a href="sachtruyen.html"> Sách truyện </a>
+                    <a href="amnhac.html"> Âm nhạc </a>
+                    <a href="anuong.html"> Ăn uống </a>
+                </div>
+            </div>
+            <a href="anhvideo.html" class="nav_list" id="nav_anhvideo"> Ảnh / Video </a>
+            <a href="tailieu.html" class="nav_list" id="nav_tailieu"> Tài liệu </a>
+            <a href="chiase.html" class="nav_list" id="nav_chiase"> Chia sẻ </a>
+
+            <div class="dropdown menu_">
+                <button class="btn btn-secondary" type="button" data-bs-toggle="dropdown" aria-expanded="false"
+                    style="background-color: rgb(255, 194, 125); border: 1px solid white;">
+                    <i class="ti-menu"></i>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="phimanh.html"> Phim ảnh </a></li>
+                    <li><a class="dropdown-item" href="sachtruyen.html"> Sách truyện </a></li>
+                    <li><a class="dropdown-item" href="amnhac.html"> Âm nhạc </a></li>
+                    <li><a class="dropdown-item" href="anuong.html"> Ăn uống </a></li>
+                    <li><a class="dropdown-item" href="anhvideo.html"> Ảnh / Video </a></li>
+                    <li><a class="dropdown-item" href="tailieu.html"> Tài liệu </a></li>
+                    <li><a class="dropdown-item" href="chiase.html"> Chia sẻ </a></li>
+                </ul>
+            </div>
+
+            <script>
+                // Get the navbar and the header
+                const navbar = document.getElementById("navbar");
+                const header = document.querySelector(".header");
+
+                window.onscroll = function () {
+                    // Calculate the distance from the top of the document to the bottom of the header
+                    let sticky = header.getBoundingClientRect().bottom + window.pageYOffset;
+
+                    // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+                    if (window.pageYOffset >= sticky) {
+                        navbar.classList.add("sticky");
+                    } else {
+                        navbar.classList.remove("sticky");
+                    }
+                };
+
+                function alertBox() {
+                    alert("Đừng hòng! Bạnn thật tồi tệ!!!");
+                }
+
+                document.querySelector('.menu_').addEventListener('click', function () {
+                    this.classList.toggle('show');
+                });
+
+                var links = document.getElementsByTagName("a"),
+                    i = 0, l = links.length,
+                    body = document.body;
+
+                for (; i < l; i++) {
+                    links[i].addEventListener("click", function () {
+                        body.className = "page-loading";
+                    }, false);
+                }
+            </script>
+        </div>
+    </div>
+    <div class="body">
+        <h1 style="padding-top: 50px; padding-bottom: 50px; font-weight: bold; color:dimgray; font-size: 60px; margin-left: 30px; margin-right: 30px;"
+            class="vt323-regular">Đây là một số tài liệu của tui!</h1>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://winzone.vn/images/blog/dsa.png" class="card-img-top" alt="...">
+                    <div class="card-body d-flex flex-column justify-content-center"
+                        style="background-image: linear-gradient(to bottom right, #ffb9b9, #f0f89c);">
+                        <h5 class="card-title"><a
+                                href="https://drive.google.com/drive/folders/194Sn4IBZQ4Kh1ZRPOrPOR22IbrdI3fk3?usp=drive_link"
+                                target="_blank" class="mynerve-regular">Môn DSA</a></h5>
+                        <p class="card-text">description...</p>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-body-secondary">Last updated 3 mins ago</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://media.gcflearnfree.org/content/5e31ca08bc7eff08e4063776_01_29_2020/ProgrammingIllustration.png"
+                        class="card-img-top" alt="...">
+                    <div class="card-body d-flex flex-column justify-content-center"
+                        style="background-image: linear-gradient(to bottom right, #ffb9b9, #f0f89c);">
+                        <h5 class="card-title"><a
+                                href="https://drive.google.com/drive/folders/1kre-BFCm5t-cpS-vP23--VOi9RdjvH1j?usp=drive_link"
+                                target="_blank" class="mynerve-regular">Môn PR2</a></h5>
+                        <p class="card-text">description...</p>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-body-secondary">Last updated 3 mins ago</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://i.pinimg.com/564x/c0/bb/2f/c0bb2fca5a00bdd1a509748efe0810a5.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body d-flex flex-column justify-content-center"
+                        style="background-image: linear-gradient(to bottom right, #ffb9b9, #f0f89c);">
+                        <h5 class="card-title"><a
+                                href="https://drive.google.com/drive/folders/13DomvA7nf1sf5AYm29OwdQHE9Di3wnFx?usp=drive_link"
+                                target="_blank" class="mynerve-regular">Môn PST</a></h5>
+                        <p class="card-text">description...</p>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-body-secondary">Last updated 3 mins ago</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://img.freepik.com/free-vector/wifi-background-with-electronic-devices-hand-drawn-style_23-2147630489.jpg?w=740&t=st=1709633045~exp=1709633645~hmac=df5a47f964f9693866457ab6193abcafe84de9c95f9844959eb5d5bdc91ba021"
+                        class="card-img-top" alt="...">
+                    <div class="card-body d-flex flex-column justify-content-center"
+                        style="background-image: linear-gradient(to bottom right, #ffb9b9, #f0f89c);">
+                        <h5 class="card-title"><a
+                                href="https://drive.google.com/drive/folders/1MZMHv923M6WwgQn4bCkUVYlmUeiOlew7?usp=drive_link"
+                                target="_blank" class="mynerve-regular">Môn CNE</a></h5>
+                        <p class="card-text">description...</p>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-body-secondary">Last updated 3 mins ago</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://i.pinimg.com/564x/25/1a/eb/251aebc2e59c2739e36a75d9be70022a.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body d-flex flex-column justify-content-center"
+                        style="background-image: linear-gradient(to bottom right, #ffb9b9, #f0f89c);">
+                        <h5 class="card-title"><a
+                                href="https://drive.google.com/drive/folders/1XOrzbAyrMO5nzwmmMnR3VADhXX1bGwKE?usp=drive_link"
+                                target="_blank" class="mynerve-regular">Môn IIS</a></h5>
+                        <p class="card-text">description...</p>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-body-secondary">Last updated 3 mins ago</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://i.pinimg.com/564x/e0/22/f7/e022f78cd58044806b9d9b0242856540.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body d-flex flex-column justify-content-center"
+                        style="background-image: linear-gradient(to bottom right, #ffb9b9, #f0f89c);">
+                        <h5 class="card-title"><a
+                                href="https://drive.google.com/drive/folders/11OADbTWHe3FOyrjR25XIVBurwB_RAb9m?usp=drive_link"
+                                target="_blank" class="mynerve-regular">Môn PRM</a></h5>
+                        <p class="card-text">description...</p>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-body-secondary">Last updated 3 mins ago</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <video playsinline autoplay muted loop>
+            <source src="images/footer1.mp4" type="video/mp4">
+        </video>
+        <div class="footercontact">
+            <p class="pangolin-regular"> <i class="ti-facebook"></i>Facebook: <a
+                    href="https://www.facebook.com/hautinhhaunet/" target="_blank" class="pangolin-regular">Jsi Jsi</a>
+            </p>
+            <p class="pangolin-regular"> <i class="ti-instagram"></i>Instagram: <a
+                    href="https://www.instagram.com/jsi2403?igsh=YWFhb292czAxdXkz" target="_blank"
+                    class="pangolin-regular">JSI
+                    JSI</a></p>
+            <p class="pangolin-regular"> <i class="ti-youtube"></i>Youtube:
+                <a href="http://www.youtube.com/@myjb4146" target="_blank" class="pangolin-regular">Jsi Jsi</a> /
+                <a href="http://www.youtube.com/@myay1483" target="_blank" class="pangolin-regular">My Đây</a>
+            </p>
+            <p class="pangolin-regular"> <i class="ti-email"></i>Email: <a href="mailto:nguyenhamy2004bie@gmail.com"
+                    target="_blank" class="pangolin-regular">nguyenhamy2004bie@gmail.com</a></p>
+            <p class="grape-nuts-regular">Wéb lỏ created by 'nvchijsi-dtu' <i class="ti-heart grape-nuts-regular"></i>
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>

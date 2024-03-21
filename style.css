@@ -1,0 +1,866 @@
+@media screen and (max-width: 1204px) {
+    .navigation {
+        height: 50px;
+    }
+
+    .navigation a {
+        display: grid;
+        grid-template-columns: 1fr;
+        transition: all 0.5s;
+        left: 0;
+        right: 0;
+        margin: 0;
+    }
+
+    #nav_home {
+        margin-right: 10px !important;
+    }
+
+    #nav_giaitri {
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 11px !important;
+    }
+
+    .nav_list {
+        padding-top: 0;
+    }
+}
+
+@media screen and (max-width: 910px) {
+    .footercontact {
+        left: 34% !important;
+    }
+}
+
+@media screen and (max-width: 872px) {
+    .navigation {
+        height: 50px;
+    }
+
+    .navigation a {
+        border: none;
+    }
+
+    #nav_home {
+        padding-right: 0 !important;
+    }
+
+    #nav_giaitri {
+        border: none !important;
+    }
+
+}
+
+@media only screen and (max-width: 800px) {
+    .content button {
+        font-size: 16px !important;
+        /* Smaller font size */
+        padding: 8px 16px !important;
+        /* Smaller padding */
+    }
+}
+
+@media screen and (max-width: 755px) {
+
+    .navigation a,
+    .navigation div {
+        display: none;
+    }
+
+    #nav_logo {
+        display: block;
+        margin-left: 4px !important;
+        margin-right: 10px !important;
+    }
+
+    .iconmenu,
+    .menu_,
+    .menu_ li a {
+        display: block !important;
+        text-align: center;
+        margin-right: 44% !important;
+    }
+
+    .iconbar {
+        margin-left: 4vw;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+
+    .footercontact a,
+    .footercontact p {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .content button {
+        font-size: 14px !important;
+        /* Even smaller font size */
+        padding: 6px 12px !important;
+        /* Even smaller padding */
+    }
+}
+
+@media screen and (max-width: 586px) {
+    .titlechiase {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .titlechiase img,
+    .titlechiase h1 {
+        margin: auto;
+    }
+
+    .titlechiase img {
+        width: 60vw !important;
+        margin-bottom: 10px !important;
+    }
+
+    .titlechiase h1 {
+        padding-left: 10%;
+    }
+}
+
+@media screen and (max-width: 555px) {
+    .iconmenu {
+        margin-right: 30% !important;
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    .footercontact a,
+    .footercontact p {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .iconmenu {
+        margin-right: 10% !important;
+    }
+
+    .content button {
+        font-size: 12px !important;
+        /* Smallest font size */
+        padding: 4px 8px !important;
+        /* Smallest padding */
+    }
+}
+
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+@keyframes page-load {
+    0% {
+        transform: scaleX(0);
+    }
+
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+.page-loading::before {
+    content: " ";
+    display: block;
+    position: fixed;
+    z-index: 10;
+    height: 5px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(to bottom right, #d9ff93, #ffadf0);
+    animation: page-load 5s ease-out 3s forwards;
+    transform-origin: left;
+}
+
+.bungee-inline-regular {
+    font-family: "Bungee Inline", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.pangolin-regular {
+    font-family: "Pangolin", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.grape-nuts-regular {
+    font-family: "Grape Nuts", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.vt323-regular {
+    font-family: "VT323", monospace;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.cherry-bomb,
+.one-regular {
+    font-family: "Cherry Bomb One", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.mynerve-regular {
+    font-family: "Mynerve", cursive;
+    font-weight: 400;
+    font-style: normal;
+    color: #545151 !important;
+}
+
+body {
+    background-image: url("images/bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* NAVIGATION */
+.header {
+    padding: 30px;
+    text-align: center;
+    padding-top: 16%;
+}
+
+.nav-wrapper {
+    height: 55px;
+    /* Set this to the height of your navigation bar */
+}
+
+.navigation {
+    text-align: center;
+    box-sizing: border-box;
+    padding: 8px;
+    width: 80%;
+    margin-left: 10%;
+    display: inline-flex;
+    justify-content: space-between;
+    z-index: 4;
+    height: 55px !important;
+    background-image: url("images/nav.png");
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 80%;
+}
+
+.nav_list {
+    font-weight: bold;
+    font-family: sans-serif;
+    color: rgb(81, 147, 80);
+    text-decoration: none;
+    font-size: 16px;
+    align-items: center;
+    border-right: 1px solid white;
+    position: relative;
+    flex-grow: 1;
+    padding-top: 7px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#nav_giaitri:hover,
+#nav_anhvideo:hover,
+#nav_tailieu:hover,
+#nav_chiase:hover,
+#nav_menu:hover {
+    color: rgb(73, 179, 255);
+}
+
+#nav_chiase {
+    border-right: none;
+}
+
+#nav_logo {
+    border: none;
+    padding-left: 0.5%;
+}
+
+.dropdown_content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: initial;
+    width: 100%;
+    z-index: 999;
+    left: 0;
+    right: 0;
+    animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.dropdown_content a {
+    color: rgb(205, 118, 218);
+    padding: 5px;
+    text-decoration: none;
+    display: block;
+    background-color: rgb(248, 232, 247);
+    border-radius: 0 0 6px 6px;
+    font-size: 13px;
+}
+
+.nav_list:hover {
+    transition: all 0.3s ease;
+}
+
+.nav_list:hover .dropdown_content {
+    display: block;
+    top: 100%;
+    left: 0;
+    border-radius: 0 0 6px 6px;
+}
+
+.dropdown_content a:hover {
+    background-color: #86bff1;
+    border-radius: 0 0 6px 6px;
+    transition: background-color 0.3s ease;
+}
+
+#nav_home {
+    border: none;
+    font-size: 20px;
+    margin-right: 0;
+    padding-right: 4vw;
+    padding-top: 4px;
+    margin-left: 9%;
+}
+
+#nav_giaitri {
+    border-left: 1px solid white;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 8px;
+}
+
+#nav_menu {
+    display: none;
+    background-color: #74B49B;
+    top: 180px;
+    left: 30%;
+    position: absolute;
+    width: 50%;
+    z-index: 3;
+    border-radius: 25px;
+}
+
+#nav_menu a {
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+}
+
+.iconmenu {
+    font-size: 30px;
+    text-decoration: none;
+    color: white;
+    line-height: 0%;
+}
+
+#icon_menu,
+.menu_ {
+    display: none;
+}
+
+#nav_menu a:hover {
+    background-color: #ddd;
+    color: black;
+    border-radius: 25px;
+}
+
+/* BODY */
+.body {
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: center;
+    background-color: #ffffff;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.card-body {
+    background-image: linear-gradient(to bottom right, #acfacd, #aceafa);
+}
+
+.menu_ .dropdown-menu {
+    --bs-dropdown-min-width: 50vw !important;
+    background-color: rgb(147, 239, 196) !important;
+    position: fixed;
+    /* Position the dropdown menu relative to the viewport */
+    left: 50% !important;
+    top: 100% !important;
+    /* Move the left edge of the dropdown menu to the center of the viewport */
+    transform: translateX(-50%) !important;
+    opacity: 0 !important;
+    /* Start with the dropdown menu invisible */
+    transition: opacity 0.5s ease-in-out !important;
+    /* Transition the opacity over 0.5 seconds */
+}
+
+.menu_.show .dropdown-menu {
+    opacity: 1 !important;
+    /* Make the dropdown menu visible when the .show class is added */
+}
+
+.carousel-item img {
+    border-radius: 25px;
+}
+
+.ti-angle-left,
+.ti-angle-right {
+    color: #7fe7f5;
+    font-size: 30px;
+}
+
+.ti-angle-left {
+    padding: 4px 4px 4px 2px;
+}
+
+.ti-angle-right {
+    padding: 4px 2px 4px 4px;
+}
+
+.ti-angle-left:hover,
+.ti-angle-right:hover {
+    color: #7ff5be;
+    border: 2px solid #7ff5be;
+    border-radius: 25px;
+}
+
+/*Trang chu */
+
+.chao {
+    display: flex;
+    margin-top: 50px;
+}
+
+.chaocacban {
+    margin-right: 20px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content h1 {
+    color: rgb(255, 175, 188);
+    padding: 20px;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+.content h2 {
+    padding: 10px;
+    font-size: 2em;
+    text-shadow: 1px 1px 2px #000000;
+}
+
+.content p {
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    text-align: justify;
+    color: #333;
+}
+
+.image-and-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content button {
+    margin: 10px;
+    font-size: 18px;
+    /* Adjust as needed */
+    padding: 10px 20px;
+    max-width: 210px;
+    flex-grow: 0;
+}
+
+.i-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /* Allow the items to wrap onto multiple lines */
+}
+
+.i-container i {
+    font-size: 18px;
+    color: #63e1f2;
+    margin: 10px 0 20px 20px;
+}
+
+.i-container a {
+    color: #639fe0;
+    /* Blue links */
+    text-decoration: none;
+    /* Remove underline */
+    line-height: 20px;
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    padding: 10px;
+    font-weight: bold;
+
+}
+
+.i-container a:hover {
+    text-decoration: underline;
+    /* Underline links on hover */
+    color: #0056b3;
+    background-color: rgba(255, 218, 115, 0.3);
+    border-radius: 30px;
+    transform: scale(1.1);
+}
+
+.btn-primary {
+    background-image: linear-gradient(to bottom right, #d1a2f2, #f2a2a2);
+    border: none !important;
+}
+
+.btn-primary:hover {
+    border: 2px #a287f4 outset !important;
+}
+
+.aboutme {
+    border: 2px dotted rgb(169, 169, 237);
+    padding: 20px 50px;
+}
+
+/* Giai tri */
+.giaitri {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.giaitri h1 {
+    color: #333;
+    font-size: 2.5em;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.giaitri h2 {
+    color: #666;
+    font-size: 2em;
+    font-weight: normal;
+    text-align: left;
+    margin-bottom: 50px;
+    padding-top: 60px;
+}
+
+.giaitri p {
+    color: #999;
+    font-size: 1.2em;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.dropdown.iconbar {
+    margin-left: 6px;
+    position: fixed;
+    z-index: 1;
+    border: none;
+    border-radius: 5px;
+    margin-top: 30px;
+}
+
+.dropdown.iconbar .btn {
+    background-color: #d4a9ef;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.dropdown.iconbar .btn:hover,
+.dropdown.iconbar .btn:focus {
+    background-color: hsl(276, 49%, 67%);
+    color: #fff;
+}
+
+.dropdown.iconbar .dropdown-menu {
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+}
+
+.dropdown.iconbar .dropdown-item {
+    color: #027371;
+    padding: 10px 20px;
+    transition: background-color 0.3s;
+}
+
+.dropdown.iconbar .dropdown-item:hover,
+.dropdown.iconbar .dropdown-item:focus {
+    background-color: #f8f9fa;
+    color: #01335c;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    /* 5px rounded corners */
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    transform: scale(1.02);
+    transition: transform 0.2s;
+}
+
+.card-body {
+    padding: 2px 16px;
+}
+
+.card-title a {
+    color: #333;
+    text-decoration: none;
+}
+
+.card-title a:hover {
+    color: #2c6339 !important;
+    text-decoration: underline 1px rgb(73, 114, 78);
+}
+
+.giaitri .card-img-top {
+    width: 100%;
+    height: auto;
+}
+
+.card-title {
+    font-size: 1.5em;
+    text-align: center;
+    padding: 10px;
+}
+
+.card-text {
+    color: #666;
+    text-align: right !important;
+}
+
+.card-footer {
+    background-color: #f8f9fa;
+    color: #333;
+    border-top: 1px solid #e5e5e5;
+}
+
+/*Am nhac */
+
+audio {
+    width: 100%;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6);
+    border-radius: 5px;
+    outline: none;
+    /* Light grey background */
+}
+
+audio::-webkit-media-controls-panel {
+    background-image: linear-gradient(to bottom right, #acfacd, #aceafa);
+}
+
+/*Anh video */
+
+.image-holder {
+    text-align: left;
+    display: flex;
+    /* Make the image and description sit side by side */
+    align-items: stretch;
+    /* Vertically center the image and description */
+    gap: 20px;
+}
+
+.description {
+    text-align: center;
+    font-size: 18px;
+    flex: 1;
+    background-color: #d4e2fc;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    /* Added to center the text vertically */
+    align-items: center;
+    /* Added to center the text vertically */
+    justify-content: center;
+    margin: 20px 20px 20px 0;
+}
+
+.image-holder img {
+    width: 50%;
+    /* Adjust as needed */
+    height: auto;
+    /* Maintain aspect ratio */
+    margin: 20px;
+    border: 1px solid #ccc;
+    /* Add a border */
+    padding: 10px;
+    /* Add some padding */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    /* Add a box shadow */
+    transition: transform .2s;
+    /* Animation */
+    border-radius: 10px;
+    filter: brightness(1) saturate(1);
+    /* Add a filter */
+    transition: transform .2s, filter .2s;
+    object-fit: cover;
+}
+
+.image-holder img:hover {
+    transform: scale(1.1);
+    /* Zoom in */
+    border-color: #504e4e;
+    /* Change border color on hover */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    /* Increase box shadow on hover */
+    transform: scale(1.1) rotate(3deg);
+    /* Add rotation to hover transform */
+    filter: brightness(1.1) saturate(1.2);
+}
+
+.image-holder img.clicked {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.5);
+    z-index: 1000;
+    max-width: 90vw;
+    /* Maximum width of 90% of viewport width */
+    max-height: 80vh;
+    /* Maximum height of 90% of viewport height */
+    object-fit: contain;
+    /* Preserve aspect ratio */
+    padding: 0;
+    /* Remove padding */
+    border: none;
+    /* Remove border */
+}
+
+/*Tai lieu */
+
+
+
+/*Chia se */
+.titlechiase {
+    display: flex;
+    text-align: center;
+    padding: 20px;
+}
+
+.titlechiase h1 {
+    margin: auto;
+    padding-right: 50px;
+    font-size: 2em;
+    color: dimgrey;
+    text-transform: uppercase;
+    /* Make the text uppercase */
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.titlechiase img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 25px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* FOOTER */
+
+footer video {
+    width: 100%;
+    margin: auto;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    display: flex;
+    /* Add this line */
+    justify-content: center;
+    /* Add this line */
+    align-items: center;
+    /* Add this line */
+    position: relative;
+}
+
+footer {
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    width: 80%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.footercontact {
+    color: white;
+    font-size: 18px;
+    z-index: 3;
+    color: rgb(75, 70, 70);
+    position: absolute;
+    left: 40%;
+}
+
+.footercontact p {
+    margin: 0;
+}
+
+.footercontact i {
+    margin-right: 10px;
+    color: #ff8181;
+}
+
+footer a {
+    color: #058b00;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #57a8ff;
+    text-decoration: underline wavy #3679c1;
+}

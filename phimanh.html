@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Jsi</title>
+    <link rel="icon" type="image/icon" href="images/logomyjsi.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="style.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Grape+Nuts&family=WindSong:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Grape+Nuts&family=Mynerve&family=WindSong:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Cherry+Bomb+One&family=Grape+Nuts&family=Mynerve&family=WindSong:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="themify-icons-font/themify-icons/themify-icons.css" />
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <div class="header">
+    </div>
+    <div class="nav-wrapper">
+        <div class="navigation" id="navbar">
+            <a href="index.html" id="nav_logo">
+                <img src="https://od.lk/s/NzlfNDgyMzY2OTlf/logomyjsi.png" width="46px" height="46px">
+            </a>
+            <a href="index.html" class="nav_list" id="nav_home"> Trang chủ </a>
+            <div class="nav_list" id="nav_giaitri"> Giải trí
+                <div class="dropdown_content">
+                    <a href="phimanh.html"> Phim ảnh </a>
+                    <a href="sachtruyen.html"> Sách truyện </a>
+                    <a href="amnhac.html"> Âm nhạc </a>
+                    <a href="anuong.html"> Ăn uống </a>
+                </div>
+            </div>
+            <a href="anhvideo.html" class="nav_list" id="nav_anhvideo"> Ảnh / Video </a>
+            <a href="tailieu.html" class="nav_list" id="nav_tailieu"> Tài liệu </a>
+            <a href="chiase.html" class="nav_list" id="nav_chiase"> Chia sẻ </a>
+
+            <div class="dropdown menu_">
+                <button class="btn btn-secondary" type="button" data-bs-toggle="dropdown" aria-expanded="false"
+                    style="background-color: rgb(255, 194, 125); border: 1px solid white;">
+                    <i class="ti-menu"></i>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="phimanh.html"> Phim ảnh </a></li>
+                    <li><a class="dropdown-item" href="sachtruyen.html"> Sách truyện </a></li>
+                    <li><a class="dropdown-item" href="amnhac.html"> Âm nhạc </a></li>
+                    <li><a class="dropdown-item" href="anuong.html"> Ăn uống </a></li>
+                    <li><a class="dropdown-item" href="anhvideo.html"> Ảnh / Video </a></li>
+                    <li><a class="dropdown-item" href="tailieu.html"> Tài liệu </a></li>
+                    <li><a class="dropdown-item" href="chiase.html"> Chia sẻ </a></li>
+                </ul>
+            </div>
+
+            <script>
+                // Get the navbar and the header
+                const navbar = document.getElementById("navbar");
+                const header = document.querySelector(".header");
+
+                window.onscroll = function () {
+                    // Calculate the distance from the top of the document to the bottom of the header
+                    let sticky = header.getBoundingClientRect().bottom + window.pageYOffset;
+
+                    // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+                    if (window.pageYOffset >= sticky) {
+                        navbar.classList.add("sticky");
+                    } else {
+                        navbar.classList.remove("sticky");
+                    }
+                };
+
+                function alertBox() {
+                    alert("Đừng hòng! Bạnn thật tồi tệ!!!");
+                }
+
+                document.querySelector('.menu_').addEventListener('click', function () {
+                    this.classList.toggle('show');
+                });
+
+                var links = document.getElementsByTagName("a"),
+                    i = 0, l = links.length,
+                    body = document.body;
+
+                for (; i < l; i++) {
+                    links[i].addEventListener("click", function () {
+                        body.className = "page-loading";
+                    }, false);
+                }
+            </script>
+        </div>
+    </div>
+
+    <div class="dropdown iconbar">
+        <button class="btn btn-secondary dropdown-toggle iconbar" type="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            Danh mục
+        </button>
+        <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#phimyeuthich"> <i class="ti-heart"></i> Phim Jsi yêu thích </a></li>
+            <li><a class="dropdown-item" href="#phimganday"> <i class="ti-bookmark-alt"></i> Phim Jsi xem gần đây </a>
+            </li>
+            <li><a class="dropdown-item" href="#dienvienthich"> <i class="ti-thumb-up"></i> Diễn viên Jsi thích thích
+                </a></li>
+        </ul>
+    </div>
+
+    <div class="body giaitri">
+
+        <h1 class="bungee-inline-regular" style="color:dimgrey;">ĐÂY LÀ MỘT SỐ PHIM ẢNH!!</h1>
+        <div id="phimyeuthich">
+            <h2>Những phim yêu thích của Jsi</h2>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://m.media-amazon.com/images/M/MV5BMjAxODk0MDg1OF5BMl5BanBnXkFtZTcwMDg1MjYyNw@@._V1_.jpg"
+                            class="card-img-top" alt="...">
+                        <div class="card-body d-flex flex-column justify-content-center">
+                            <h5 class="card-title mynerve-regular" style="font-size: 1.6rem;"> A Walk To Remember </h5>
+                            <p class="card-text">description...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://i.ytimg.com/vi/aZQCGi4kXLw/maxresdefault.jpg" class="card-img-top" alt="...">
+                        <div class="card-body d-flex flex-column justify-content-center">
+                            <h5 class="card-title mynerve-regular" style="font-size: 1.6rem;"> Những phim Barbie </h5>
+                            <p class="card-text">description...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://www.hindustantimes.com/ht-img/img/2023/08/20/1600x900/3e8e7-16924907435140-1920_1692539328427_1692539345313.webp"
+                            class="card-img-top" alt="...">
+                        <div class="card-body d-flex flex-column justify-content-center">
+                            <h5 class="card-title mynerve-regular" style="font-size: 1.6rem;"> The Big Bang Theory </h5>
+                            <p class="card-text">Description...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://www.bpmcdn.com/f/files/vernon/import/2022-06/29555729_web1_220630-KCN-Breaking-Bad-_1.jpg"
+                            class="card-img-top" alt="...">
+                        <div class="card-body d-flex flex-column justify-content-center">
+                            <h5 class="card-title mynerve-regular" style="font-size: 1.6rem;"> Breaking Bad </h5>
+                            <p class="card-text">Description...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://ss-images.saostar.vn/2020/02/01/6912129/90215864-c907-49a0-93cd-766b4e498497.png"
+                            class="card-img-top" alt="...">
+                        <div class="card-body d-flex flex-column justify-content-center">
+                            <h5 class="card-title mynerve-regular" style="font-size: 1.6rem;"> Các phim công chúa Disney
+                            </h5>
+                            <p class="card-text">Description...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://pic0.iqiyipic.com/image/20211108/61/3d/a_100481611_m_601_vi_720_405.jpg"
+                            class="card-img-top" alt="...">
+                        <div class="card-body d-flex flex-column justify-content-center">
+                            <h5 class="card-title mynerve-regular" style="font-size: 1.6rem;"> Chỉ Là Quan Hệ Hôn Nhân
+                            </h5>
+                            <p class="card-text">Description...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://media.assettype.com/film-companion%2Fimport%2Fwp-content%2Fuploads%2F2020%2F05%2FFilm-companion-call-me-by-your-name-lead-image-6.jpg?w=1200&ar=40%3A21&auto=format%2Ccompress&ogImage=true&mode=crop&enlarge=true&overlay=false&overlay_position=bottom&overlay_width=100"
+                            class="card-img-top" alt="...">
+                        <div class="card-body d-flex flex-column justify-content-center">
+                            <h5 class="card-title mynerve-regular" style="font-size: 1.6rem;"> Call Me By Your Name
+                            </h5>
+                            <p class="card-text">Description...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://cdn.tgdd.vn/Files/2023/08/02/1540758/nhung-cau-noi-hay-nhat-trong-phim-tham-tu-lung-danh-conan-202308021125158172.jpg"
+                            class="card-img-top" alt="...">
+                        <div class="card-body d-flex flex-column justify-content-center">
+                            <h5 class="card-title mynerve-regular" style="font-size: 1.6rem;"> Thám Tử Lừng Danh Conan
+                            </h5>
+                            <p class="card-text">Description</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://upload.wikimedia.org/wikipedia/vi/e/ec/Ch%E1%BA%A1m_tay_v%C3%A0o_n%E1%BB%97i_nh%E1%BB%9B.jpeg"
+                            class="card-img-top" alt="...">
+                        <div class="card-body d-flex flex-column justify-content-center">
+                            <h5 class="card-title mynerve-regular" style="font-size: 1.6rem;"> Chạm Tay Vào Nỗi Nhớ
+                            </h5>
+                            <p class="card-text">Description...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://images.thequint.com/thequint%2F2019-09%2Fae637fcc-0deb-4a49-a23c-ed74d8222004%2FUntitled_design__10_.jpg?rect=0%2C0%2C1920%2C1080"
+                            class="card-img-top" alt="...">
+                        <div class="card-body d-flex flex-column justify-content-center">
+                            <h5 class="card-title mynerve-regular" style="font-size: 1.6rem;"> El Camino </h5>
+                            <p class="card-text">Description...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://assets2.htv.com.vn/Images/TAP%20CHI%20HTV/HAU%20TRUONG%20TRUYEN%20HINH/DUONG%202020/Forrest%20Gump/Forrest.jpg"
+                            class="card-img-top" alt="...">
+                        <div class="card-body d-flex flex-column justify-content-center">
+                            <h5 class="card-title mynerve-regular" style="font-size: 1.6rem;"> Forrest Gump </h5>
+                            <p class="card-text">Description...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/2970945770FC137FF7D5D3408D5D40836FD4C715DE6A1744F6F5AF21B2386827/scale?width=1200&amp;aspectRatio=1.78&amp;format=webp"
+                            class="card-img-top" alt="...">
+                        <div class="card-body d-flex flex-column justify-content-center">
+                            <h5 class="card-title mynerve-regular" style="font-size: 1.6rem;"> How I Met Your Mother
+                            </h5>
+                            <p class="card-text">Description...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://kenh14cdn.com/203336854389633024/2022/11/9/photo-6-1667968499078682448962.jpeg"
+                            class="card-img-top" alt="...">
+                        <div class="card-body d-flex flex-column justify-content-center">
+                            <h5 class="card-title mynerve-regular" style="font-size: 1.6rem;"> Nhóc Maruko </h5>
+                            <p class="card-text">Description...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://cms.dmpcdn.com/season/2022/03/02/44e76c60-99cf-11ec-b284-5f31e44ad15a_webp_original.jpg"
+                            class="card-img-top" alt="...">
+                        <div class="card-body d-flex flex-column justify-content-center">
+                            <h5 class="card-title mynerve-regular" style="font-size: 1.6rem;"> Mùa Hè Của Hồ Ly </h5>
+                            <p class="card-text">Description...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://cdn.tuoitre.vn/471584752817336320/2023/9/4/thumbnail-16938093647461404696902.jpg"
+                            class="card-img-top" alt="...">
+                        <div class="card-body d-flex flex-column justify-content-center">
+                            <h5 class="card-title mynerve-regular" style="font-size: 1.6rem;"> One Piece Live Action
+                            </h5>
+                            <p class="card-text">Description...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://1.vikiplatform.com/c/26576c/Reply-1988_1560x872_modified_1.jpg?x=b"
+                            class="card-img-top" alt="...">
+                        <div class="card-body d-flex flex-column justify-content-center">
+                            <h5 class="card-title mynerve-regular" style="font-size: 1.6rem;"> Reply 1988 </h5>
+                            <p class="card-text">Description...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://newsmd2fr.keeng.vn/tiin/archive/imageslead/2023/04/05/ao1i9paq72u5o98pso52ia5rl469eryu.jpg"
+                            class="card-img-top" alt="...">
+                        <div class="card-body d-flex flex-column justify-content-center">
+                            <h5 class="card-title mynerve-regular" style="font-size: 1.6rem;"> Trường Nguyệt Tẫn Minh
+                            </h5>
+                            <p class="card-text">Description...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/421841DB2EB70A4718B792D247A03CD9838A6E67AB49636F3EA0B971EA18E7C1/scale?width=1200&amp;aspectRatio=1.78&amp;format=webp"
+                            class="card-img-top" alt="...">
+                        <div class="card-body d-flex flex-column justify-content-center">
+                            <h5 class="card-title mynerve-regular" style="font-size: 1.6rem;"> 10 Things I Hate About
+                                You
+                            </h5>
+                            <p class="card-text">Description...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://s21519.pcdn.co/wp-content/uploads/2019/04/Us.png" class="card-img-top"
+                            alt="...">
+                        <div class="card-body d-flex flex-column justify-content-center">
+                            <h5 class="card-title mynerve-regular" style="font-size: 1.6rem;"> Us </h5>
+                            <p class="card-text">Description...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://images.fbox.fpt.vn/wordpress-blog/2023/10/vung-dat-linh-hon.jpg"
+                            class="card-img-top" alt="...">
+                        <div class="card-body d-flex flex-column justify-content-center">
+                            <h5 class="card-title mynerve-regular" style="font-size: 1.6rem;"> Vùng Đất Linh Hồn </h5>
+                            <p class="card-text">Description...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://vcdn-vnexpress.vnecdn.net/2016/10/18/vuon-sao-bang-2199-1476728579.jpg"
+                            class="card-img-top" alt="...">
+                        <div class="card-body d-flex flex-column justify-content-center">
+                            <h5 class="card-title mynerve-regular" style="font-size: 1.6rem;"> Vườn Sao Băng </h5>
+                            <p class="card-text">Description...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://www.totallicensing.com/wp-content/uploads/2022/01/Winx-Club-18-anni-scaled.jpg"
+                            class="card-img-top" alt="...">
+                        <div class="card-body d-flex flex-column justify-content-center">
+                            <h5 class="card-title mynerve-regular" style="font-size: 1.6rem;"> Winx </h5>
+                            <p class="card-text">Description...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="phimganday">
+            <h2>Những phim gần đây Jsi xem</h2>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://www.hindustantimes.com/ht-img/img/2023/08/20/1600x900/3e8e7-16924907435140-1920_1692539328427_1692539345313.webp"
+                            class="card-img-top" alt="...">
+                        <div class="card-body d-flex flex-column justify-content-center">
+                            <h5 class="card-title mynerve-regular" style="font-size: 1.6rem;"> The Big Bang Theory </h5>
+                            <p class="card-text">description...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://tallwriter.files.wordpress.com/2017/03/enchantedanimated.jpg"
+                            class="card-img-top" alt="...">
+                        <div class="card-body d-flex flex-column justify-content-center">
+                            <h5 class="card-title mynerve-regular" style="font-size: 1.6rem;"> Enchanted </h5>
+                            <p class="card-text">description...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://kenh14cdn.com/crop/640_360/2018/7/10/photo1531199850386-15311998503861856390925.jpg"
+                            class="card-img-top" alt="...">
+                        <div class="card-body d-flex flex-column justify-content-center">
+                            <h5 class="card-title mynerve-regular" style="font-size: 1.6rem;"> Vườn Sao Băng (Bản Trung
+                                Quốc) </h5>
+                            <p class="card-text">Description...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://cms.dmpcdn.com/season/2022/03/02/44e76c60-99cf-11ec-b284-5f31e44ad15a_webp_original.jpg"
+                            class="card-img-top" alt="...">
+                        <div class="card-body d-flex flex-column justify-content-center">
+                            <h5 class="card-title mynerve-regular" style="font-size: 1.6rem;"> Mùa Hè Của Hồ Ly </h5>
+                            <p class="card-text">Description...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://movies.sterkinekor.co.za/CDN/media/entity/get/FilmTitleGraphic/HO00002837?referenceScheme=HeadOffice&allowPlaceHolder=true"
+                            class="card-img-top" alt="...">
+                        <div class="card-body d-flex flex-column justify-content-center">
+                            <h5 class="card-title mynerve-regular" style="font-size: 1.6rem;"> Wonka </h5>
+                            <p class="card-text">Description...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="dienvienthich">
+            <h2>Những diễn viên mà Jsi thích thích</h2>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://vtv1.mediacdn.vn/zoom/640_400/2023/3/17/170323-justin-bieber-1679021293922804029566-crop-16790212991152060934209.jpeg"
+                            class="card-img-top" alt="...">
+                        <div class="card-body d-flex flex-column justify-content-center">
+                            <h5 class="card-title mynerve-regular" style="font-size: 1.6rem;">Justin Bieber</h5>
+                            <p class="card-text">Phim: </p>
+                            <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://vcdn-giaitri.vnecdn.net/2022/09/29/-2489-1664439619.jpg" class="card-img-top"
+                            alt="...">
+                        <div class="card-body d-flex flex-column justify-content-center">
+                            <h5 class="card-title mynerve-regular" style="font-size: 1.6rem;">Tom Hanks</h5>
+                            <p class="card-text">Phim: </p>
+                            <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://variety.com/wp-content/uploads/2019/10/shutterstock_editorial_10414791hp.jpg"
+                            class="card-img-top" alt="...">
+                        <div class="card-body d-flex flex-column justify-content-center">
+                            <h5 class="card-title mynerve-regular" style="font-size: 1.6rem;">Neil Patrick Harris</h5>
+                            <p class="card-text">Phim: How I Met Your Mother</p>
+                            <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <video playsinline autoplay muted loop>
+            <source src="images/footer1.mp4" type="video/mp4">
+        </video>
+        <div class="footercontact">
+            <p class="pangolin-regular"> <i class="ti-facebook"></i>Facebook: <a
+                    href="https://www.facebook.com/hautinhhaunet/" target="_blank" class="pangolin-regular">Jsi Jsi</a>
+            </p>
+            <p class="pangolin-regular"> <i class="ti-instagram"></i>Instagram: <a
+                    href="https://www.instagram.com/jsi2403?igsh=YWFhb292czAxdXkz" target="_blank"
+                    class="pangolin-regular">JSI
+                    JSI</a></p>
+            <p class="pangolin-regular"> <i class="ti-youtube"></i>Youtube:
+                <a href="http://www.youtube.com/@myjb4146" target="_blank" class="pangolin-regular">Jsi Jsi</a> /
+                <a href="http://www.youtube.com/@myay1483" target="_blank" class="pangolin-regular">My Đây</a>
+            </p>
+            <p class="pangolin-regular"> <i class="ti-email"></i>Email: <a href="mailto:nguyenhamy2004bie@gmail.com"
+                    target="_blank" class="pangolin-regular">nguyenhamy2004bie@gmail.com</a></p>
+            <p class="grape-nuts-regular">Wéb lỏ created by 'nvchijsi-dtu' <i class="ti-heart grape-nuts-regular"></i>
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>

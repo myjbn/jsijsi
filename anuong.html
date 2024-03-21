@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Jsi</title>
+    <link rel="icon" type="image/icon" href="images/logomyjsi.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="style.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Grape+Nuts&family=WindSong:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Grape+Nuts&family=Mynerve&family=WindSong:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Cherry+Bomb+One&family=Grape+Nuts&family=Mynerve&family=WindSong:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="themify-icons-font/themify-icons/themify-icons.css" />
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <div class="header">
+    </div>
+    <div class="nav-wrapper">
+        <div class="navigation" id="navbar">
+            <a href="index.html" id="nav_logo">
+                <img src="https://od.lk/s/NzlfNDgyMzY2OTlf/logomyjsi.png" width="46px" height="46px">
+            </a>
+            <a href="index.html" class="nav_list" id="nav_home"> Trang chủ </a>
+            <div class="nav_list" id="nav_giaitri"> Giải trí
+                <div class="dropdown_content">
+                    <a href="phimanh.html"> Phim ảnh </a>
+                    <a href="sachtruyen.html"> Sách truyện </a>
+                    <a href="amnhac.html"> Âm nhạc </a>
+                    <a href="anuong.html"> Ăn uống </a>
+                </div>
+            </div>
+            <a href="anhvideo.html" class="nav_list" id="nav_anhvideo"> Ảnh / Video </a>
+            <a href="tailieu.html" class="nav_list" id="nav_tailieu"> Tài liệu </a>
+            <a href="chiase.html" class="nav_list" id="nav_chiase"> Chia sẻ </a>
+
+            <div class="dropdown menu_">
+                <button class="btn btn-secondary" type="button" data-bs-toggle="dropdown" aria-expanded="false"
+                    style="background-color: rgb(255, 194, 125); border: 1px solid white;">
+                    <i class="ti-menu"></i>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="phimanh.html"> Phim ảnh </a></li>
+                    <li><a class="dropdown-item" href="sachtruyen.html"> Sách truyện </a></li>
+                    <li><a class="dropdown-item" href="amnhac.html"> Âm nhạc </a></li>
+                    <li><a class="dropdown-item" href="anuong.html"> Ăn uống </a></li>
+                    <li><a class="dropdown-item" href="anhvideo.html"> Ảnh / Video </a></li>
+                    <li><a class="dropdown-item" href="tailieu.html"> Tài liệu </a></li>
+                    <li><a class="dropdown-item" href="chiase.html"> Chia sẻ </a></li>
+                </ul>
+            </div>
+
+            <script>
+                // Get the navbar and the header
+                const navbar = document.getElementById("navbar");
+                const header = document.querySelector(".header");
+
+                window.onscroll = function () {
+                    // Calculate the distance from the top of the document to the bottom of the header
+                    let sticky = header.getBoundingClientRect().bottom + window.pageYOffset;
+
+                    // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+                    if (window.pageYOffset >= sticky) {
+                        navbar.classList.add("sticky");
+                    } else {
+                        navbar.classList.remove("sticky");
+                    }
+                };
+
+                function alertBox() {
+                    alert("Đừng hòng! Bạnn thật tồi tệ!!!");
+                }
+
+                document.querySelector('.menu_').addEventListener('click', function () {
+                    this.classList.toggle('show');
+                });
+
+                var links = document.getElementsByTagName("a"),
+                    i = 0, l = links.length,
+                    body = document.body;
+
+                for (; i < l; i++) {
+                    links[i].addEventListener("click", function () {
+                        body.className = "page-loading";
+                    }, false);
+                }
+            </script>
+        </div>
+    </div>
+    <div class="dropdown iconbar">
+        <button class="btn btn-secondary dropdown-toggle iconbar" type="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            Danh mục
+        </button>
+        <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#anuongyeuthich"> <i class="ti-heart"></i> Đồ ăn uống Jsi yêu thích </a>
+            </li>
+            <li><a class="dropdown-item" href="#anuongganday"> <i class="ti-bookmark-alt"></i> Đồ ăn uống Jsi xơi gần
+                    đây </a></li>
+            <li><a class="dropdown-item" href="#quananuongthich"> <i class="ti-thumb-up"></i> Quán ăn uống Jsi thích
+                    thích </a></li>
+        </ul>
+    </div>
+
+    <div class="body giaitri">
+
+        <h1 class="bungee-inline-regular" style="color:dimgrey;">ĐÂY LÀ MỘT SỐ ĐỒ ĂN UỐNG!</h1>
+        <div id="anuongyeuthich">
+            <h2>Những món ăn uống yêu thích của Jsi</h2>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://namhuydongthap.com/wp-content/uploads/2023/09/New9.jpg" class="card-img-top"
+                            alt="...">
+                        <div class="card-body d-flex flex-column justify-content-center">
+                            <h5 class="card-title mynerve-regular" style="font-size: 1.6rem;"> Khoai môn sấy </h5>
+                            <p class="card-text">Description...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://product.hstatic.net/1000337401/product/g_n_b__master.jpg" class="card-img-top"
+                            alt="...">
+                        <div class="card-body d-flex flex-column justify-content-center">
+                            <h5 class="card-title mynerve-regular" style="font-size: 1.6rem;"> Gân bò </h5>
+                            <p class="card-text">Description...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://www.vinmec.com/s3-images/20201107_040214_949185_dau-hu-song_hibd.max-800x800.jpg"
+                            class="card-img-top" alt="...">
+                        <div class="card-body d-flex flex-column justify-content-center">
+                            <h5 class="card-title mynerve-regular" style="font-size: 1.6rem;"> Đậu phụ </h5>
+                            <p class="card-text">Description...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="images/noname.png" class="card-img-top" alt="...">
+                        <div class="card-body d-flex flex-column justify-content-center">
+                            <h5 class="card-title mynerve-regular" style="font-size: 1.6rem;"> Bún dải ở Ba Vì</h5>
+                            <p class="card-text">Description...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="images/noname.png" class="card-img-top" alt="...">
+                        <div class="card-body d-flex flex-column justify-content-center">
+                            <h5 class="card-title mynerve-regular" style="font-size: 1.6rem;"> Bún ở cuối ngõ A4 </h5>
+                            <p class="card-text">Description...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://suckhoedoisong.qltns.mediacdn.vn/324455921873985536/2021/8/28/thit-ech1-16301203640362129929557.jpg"
+                            class="card-img-top" alt="...">
+                        <div class="card-body d-flex flex-column justify-content-center">
+                            <h5 class="card-title mynerve-regular" style="font-size: 1.6rem;"> Thịt ếch </h5>
+                            <p class="card-text">Description...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="images/btd.png" class="card-img-top" alt="...">
+                        <div class="card-body d-flex flex-column justify-content-center">
+                            <h5 class="card-title mynerve-regular" style="font-size: 1.6rem;"> Bánh thực dưỡng </h5>
+                            <p class="card-text">Description...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://www.cleanipedia.com/images/5iwkm8ckyw6v/4NAp2L4NRaRpHkKlye00kU/2fe30f30ed11ff7bdccff99837c48887/aHVvbmctZGFuLWNhY2gtbmF1LWJhbmgtY2FuaC1naW8taGVvLW51b2MtZHVuZy10cm9uZy10aG9tLW5nb24tZGFtLWRhLmpwZw/1200w/h%C6%B0%E1%BB%9Bng-d%E1%BA%ABn-c%C3%A1ch-n%E1%BA%A5u-b%C3%A1nh-canh-gi%C3%B2-heo-n%C6%B0%E1%BB%9Bc-d%C3%B9ng-trong%2C-th%C6%A1m-ngon-%C4%91%E1%BA%ADm-%C4%91%C3%A0.jpg"
+                            class="card-img-top" alt="...">
+                        <div class="card-body d-flex flex-column justify-content-center">
+                            <h5 class="card-title mynerve-regular" style="font-size: 1.6rem;"> Bánh canh </h5>
+                            <p class="card-text">Description...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="images/noname.png" class="card-img-top" alt="...">
+                        <div class="card-body d-flex flex-column justify-content-center">
+                            <h5 class="card-title mynerve-regular" style="font-size: 1.6rem;"> Đồ uống Amway </h5>
+                            <p class="card-text">Description...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="images/noname.png" class="card-img-top" alt="...">
+                        <div class="card-body d-flex flex-column justify-content-center">
+                            <h5 class="card-title mynerve-regular" style="font-size: 1.6rem;"> Đồ uống Laboong </h5>
+                            <p class="card-text">Description...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="images/noname.png" class="card-img-top" alt="...">
+                        <div class="card-body d-flex flex-column justify-content-center">
+                            <h5 class="card-title mynerve-regular" style="font-size: 1.6rem;"> Các loại nước hạt </h5>
+                            <p class="card-text">Description...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://riversteam.vn/public/uploads/all/DGu9R7GVjocrcZyNb0z6PL8uyqr2lMGjyJ2OmgZa.jpg"
+                            class="card-img-top" alt="...">
+                        <div class="card-body d-flex flex-column justify-content-center">
+                            <h5 class="card-title mynerve-regular" style="font-size: 1.6rem;"> Nước ép nho </h5>
+                            <p class="card-text">Description...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://product.hstatic.net/200000559893/product/sua_chua_vinamilk_khong_duong-2_dddda110b0f84423a5b066390d1eb75b.png"
+                            class="card-img-top" alt="...">
+                        <div class="card-body d-flex flex-column justify-content-center">
+                            <h5 class="card-title mynerve-regular" style="font-size: 1.6rem;"> Sữa chua không đường
+                            </h5>
+                            <p class="card-text">Description...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://congthuong-cdn.mastercms.vn/stores/news_dataimages/ngocmai/082019/05/10/in_article/mua-vulan-do-chay-dat-khach_1.jpg"
+                            class="card-img-top" alt="...">
+                        <div class="card-body d-flex flex-column justify-content-center">
+                            <h5 class="card-title mynerve-regular" style="font-size: 1.6rem;"> Đồ chay </h5>
+                            <p class="card-text">Description...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://i.ytimg.com/vi/xIK71edjQak/maxresdefault.jpg" class="card-img-top" alt="...">
+                        <div class="card-body d-flex flex-column justify-content-center">
+                            <h5 class="card-title mynerve-regular" style="font-size: 1.6rem;"> Ăn vặt bà Tuyết Diamond
+                            </h5>
+                            <p class="card-text">Description...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://mayxaygiochaviendong.com/wp-content/uploads/2022/01/Ruocthitlon-1200x676-1.jpg"
+                            class="card-img-top" alt="...">
+                        <div class="card-body d-flex flex-column justify-content-center">
+                            <h5 class="card-title mynerve-regular" style="font-size: 1.6rem;"> Ruốc </h5>
+                            <p class="card-text">Description...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://www.kemtrangtientruyenthong.com/upload/C8E8BFF9-CEAF-4BFE-A49A-616F857AD209_-15-12-2023-01-33-17.JPEG"
+                            class="card-img-top" alt="...">
+                        <div class="card-body d-flex flex-column justify-content-center">
+                            <h5 class="card-title mynerve-regular" style="font-size: 1.6rem;"> Kem Tràng Tiền </h5>
+                            <p class="card-text">Description...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://images.foody.vn/res/g115/1144759/prof/s1242x600/image-665cb3df-220825151127.jpg"
+                            class="card-img-top" alt="...">
+                        <div class="card-body d-flex flex-column justify-content-center">
+                            <h5 class="card-title mynerve-regular" style="font-size: 1.6rem;"> Sữa chua trân châu Hạ
+                                Long
+                            </h5>
+                            <p class="card-text">Description...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://mykitchies.files.wordpress.com/2017/07/wp-image-1591699589.jpg"
+                            class="card-img-top" alt="...">
+                        <div class="card-body d-flex flex-column justify-content-center">
+                            <h5 class="card-title mynerve-regular" style="font-size: 1.6rem;"> Tào phớ </h5>
+                            <p class="card-text">Description...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://suckhoedoisong.qltns.mediacdn.vn/324455921873985536/2022/3/5/toi-den-16464789803541174904737.jpg"
+                            class="card-img-top" alt="...">
+                        <div class="card-body d-flex flex-column justify-content-center">
+                            <h5 class="card-title mynerve-regular" style="font-size: 1.6rem;"> Tỏi đen </h5>
+                            <p class="card-text">Description...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://hdpshop.vn/wp-content/uploads/2021/01/z2265547116693_585d3fb6e105700c545fefea98944ea1.jpg"
+                            class="card-img-top" alt="...">
+                        <div class="card-body d-flex flex-column justify-content-center">
+                            <h5 class="card-title mynerve-regular" style="font-size: 1.6rem;"> Nước tỏi đen sâm </h5>
+                            <p class="card-text">Description...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="images/noname.png" class="card-img-top" alt="...">
+                        <div class="card-body d-flex flex-column justify-content-center">
+                            <h5 class="card-title mynerve-regular" style="font-size: 1.6rem;"> Những món U nấu </h5>
+                            <p class="card-text">Description...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="anuongganday">
+            <h2>Những món ăn uống gần đây Jsi đớp</h2>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://product.hstatic.net/1000337401/product/g_n_b__master.jpg" class="card-img-top"
+                            alt="...">
+                        <div class="card-body d-flex flex-column justify-content-center">
+                            <h5 class="card-title mynerve-regular" style="font-size: 1.6rem;"> Gân bò </h5>
+                            <p class="card-text">Description...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://namhuydongthap.com/wp-content/uploads/2023/09/New9.jpg" class="card-img-top"
+                            alt="...">
+                        <div class="card-body d-flex flex-column justify-content-center">
+                            <h5 class="card-title mynerve-regular" style="font-size: 1.6rem;"> Khoai môn sấy </h5>
+                            <p class="card-text">Description...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://od.lk/s/NzlfNDgyMzY2ODNf/btd.png" class="card-img-top" alt="...">
+                        <div class="card-body d-flex flex-column justify-content-center">
+                            <h5 class="card-title mynerve-regular" style="font-size: 1.6rem;"> Bánh thực dưỡng </h5>
+                            <p class="card-text">Description...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://hdpshop.vn/wp-content/uploads/2021/01/z2265547116693_585d3fb6e105700c545fefea98944ea1.jpg"
+                            class="card-img-top" alt="...">
+                        <div class="card-body d-flex flex-column justify-content-center">
+                            <h5 class="card-title mynerve-regular" style="font-size: 1.6rem;"> Nước tỏi đen sâm (thối
+                                um)
+                            </h5>
+                            <p class="card-text">Description...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="quananuongthich">
+            <h2>Quán ăn uống mà Jsi thích thích</h2>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="images/noname.png" class="card-img-top" alt="...">
+                        <div class="card-body d-flex flex-column justify-content-center">
+                            <h5 class="card-title mynerve-regular" style="font-size: 1.6rem;">Quán bún cuối ngõ A4</h5>
+                            <p class="card-text"> </p>
+                            <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="images/noname.png" class="card-img-top" alt="...">
+                        <div class="card-body d-flex flex-column justify-content-center">
+                            <h5 class="card-title mynerve-regular" style="font-size: 1.6rem;">Quán bún dải ở Ba Vì</h5>
+                            <p class="card-text"> </p>
+                            <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="images/noname.png" class="card-img-top" alt="...">
+                        <div class="card-body d-flex flex-column justify-content-center">
+                            <h5 class="card-title mynerve-regular" style="font-size: 1.6rem;">Quán bún cô Đan</h5>
+                            <p class="card-text"></p>
+                            <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="images/noname.png" class="card-img-top" alt="...">
+                        <div class="card-body d-flex flex-column justify-content-center">
+                            <h5 class="card-title mynerve-regular" style="font-size: 1.6rem;">Quán vợ (chị) ong vàng
+                            </h5>
+                            <p class="card-text"></p>
+                            <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="images/noname.png" class="card-img-top" alt="...">
+                        <div class="card-body d-flex flex-column justify-content-center">
+                            <h5 class="card-title mynerve-regular" style="font-size: 1.6rem;">Quán Amway</h5>
+                            <p class="card-text"></p>
+                            <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="images/noname.png" class="card-img-top" alt="...">
+                        <div class="card-body d-flex flex-column justify-content-center">
+                            <h5 class="card-title mynerve-regular" style="font-size: 1.6rem;">Quán O Hoa</h5>
+                            <p class="card-text"></p>
+                            <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="images/noname.png" class="card-img-top" alt="...">
+                        <div class="card-body d-flex flex-column justify-content-center">
+                            <h5 class="card-title mynerve-regular" style="font-size: 1.6rem;">Quán Bing Long</h5>
+                            <p class="card-text"></p>
+                            <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="images/noname.png" class="card-img-top" alt="...">
+                        <div class="card-body d-flex flex-column justify-content-center">
+                            <h5 class="card-title mynerve-regular" style="font-size: 1.6rem;">Quán tào phớ ở Sơn Tây
+                            </h5>
+                            <p class="card-text"></p>
+                            <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <video playsinline autoplay muted loop>
+            <source src="images/footer1.mp4" type="video/mp4">
+        </video>
+        <div class="footercontact">
+            <p class="pangolin-regular"> <i class="ti-facebook"></i>Facebook: <a
+                    href="https://www.facebook.com/hautinhhaunet/" target="_blank" class="pangolin-regular">Jsi Jsi</a>
+            </p>
+            <p class="pangolin-regular"> <i class="ti-instagram"></i>Instagram: <a
+                    href="https://www.instagram.com/jsi2403?igsh=YWFhb292czAxdXkz" target="_blank"
+                    class="pangolin-regular">JSI
+                    JSI</a></p>
+            <p class="pangolin-regular"> <i class="ti-youtube"></i>Youtube:
+                <a href="http://www.youtube.com/@myjb4146" target="_blank" class="pangolin-regular">Jsi Jsi</a> /
+                <a href="http://www.youtube.com/@myay1483" target="_blank" class="pangolin-regular">My Đây</a>
+            </p>
+            <p class="pangolin-regular"> <i class="ti-email"></i>Email: <a href="mailto:nguyenhamy2004bie@gmail.com"
+                    target="_blank" class="pangolin-regular">nguyenhamy2004bie@gmail.com</a></p>
+            <p class="grape-nuts-regular">Wéb lỏ created by 'nvchijsi-dtu' <i class="ti-heart grape-nuts-regular"></i>
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>
