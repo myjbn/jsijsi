@@ -141,6 +141,14 @@
         /* Even smaller padding */
     }
 
+    .mobile {
+        display: block !important;
+    }
+
+    .content {
+        margin-top: -60px;
+    }
+
     .chao {
         display: block !important;
     }
@@ -517,9 +525,15 @@ body {
 
 /*Trang chu */
 
+.mobile {
+    margin-top: 10px;
+    margin-bottom: 0 !important;
+    display: none;
+}
+
 .chao {
     display: flex;
-    margin-top: 50px;
+    margin-top: 20px;
 }
 
 .chaocacban {
