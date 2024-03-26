@@ -362,6 +362,11 @@ body {
     padding-left: 0.5%;
 }
 
+#nav_logo img {
+    height: 50px;
+    margin-top: -8%;
+}
+
 .dropdown_content {
     display: none;
     position: absolute;
