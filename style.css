@@ -640,9 +640,15 @@ body {
     border: 2px #a287f4 outset !important;
 }
 
+.frame-container {
+    background-image: url("images/frame.png");
+    background-size: 100% 100%;
+    /* This will stretch the image to fill the container */
+    background-repeat: no-repeat;
+}
+
 .aboutme {
-    border: 2px dotted rgb(169, 169, 237);
-    padding: 20px 50px;
+    padding: 100px;
 }
 
 .aboutme p {
