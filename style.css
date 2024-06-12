@@ -177,15 +177,18 @@
         font-size: 10px;
     }
 
-    .image-holder {
+    .image-holder,
+    .video-holder {
         display: block !important;
     }
 
-    .image-holder img {
+    .image-holder img,
+    .video-holder video {
         width: 90% !important;
     }
 
-    .image-holder .description {
+    .image-holder .description,
+    .video-holder .description {
         margin: auto;
         width: 90%;
     }
