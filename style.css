@@ -1,3 +1,13 @@
+@media (max-width: 1424px) {
+
+    .col1,
+    .col2 {
+        flex-direction: row;
+        text-align: justify;
+        margin: auto;
+    }
+}
+
 @media (max-width: 1250px) {
 
     .col1,
